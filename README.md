@@ -1,17 +1,17 @@
 # newRPS
 version 1.0
     --  minimal UI, just an alert function that accepts some user input.
-    --  input should take the user input and store it into a local veriable.
-    --  This variable should then be compared against a randomly generated comptuer choice.
+    --  input should take the user input and store it into a local variable.
+    --  This variable should then be compared against a randomly generated computer choice.
     --  Both results should be displayed for the user.
-    --  The corrosponding points box should be updated.
+    --  The corresponding points box should be updated.
     --  The program should then ask the user if they plan to play again.
 
 
-Possbile problems :
-    User enters an interger.
+Possible problems :
+    User enters an integer.
     User enters nothing.
-    User enters Nothing into the feild.
+    User enters Nothing into the filed.
 
 possible combos
 

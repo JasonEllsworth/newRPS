@@ -22,7 +22,7 @@ if (choiceArray.includes(userInput)) {
 }
 
 function rPS() {
-    if (userChoice === compNumber) {
+    if (userChoice === compChoice) {
         console.log("Its a  tie!");
     } else if (userChoice === "rock" && compChoice === "paper" || userChoice === "scissors" && compChoice === "paper" ||
         userChoice === "paper" && compChoice === "rock") {
