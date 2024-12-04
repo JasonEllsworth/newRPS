@@ -18,19 +18,29 @@ function round(result) {
     return p;
 }
 
+//remove result child node on new game.
+function deleteNode() {
+    result.removeChild(result.lastElementChild);
+}
+
 // event listeners for player button selection.
 
 rockBtn.addEventListener('click', ()=> {
+
     playround("rock");
+
 })
 
 paperBtn.addEventListener('click', ()=> {
+
     playround("paper");
 })
 
 scissorsBtn.addEventListener('click', ()=>
 {
+
     playround("scissors");
+
 })
 
 
@@ -58,17 +68,19 @@ function playround(value) {
     let buttonValue = value;
     let compValue = computer();
 
+    if (computerScore > 0 || userScore > 0 || rpsTie > 0) {
+        deleteNode();
+    }
+
             if (buttonValue === compValue) {
-                console.log("Its a  tie!");
+                displayResult.append(round("tie!"));
                 rpsTie = rpsTie + 1;
             } else if (buttonValue === "rock" && compValue === "paper" || buttonValue === "scissors"
                 && compValue === "paper" || buttonValue=== "paper" && compValue === "rock") {
-                console.log("You win!");
+                displayResult.append(round("user wins!"));
                 userScore = userScore + 1;
             } else {
-                compScore.innerText = computerScore;
-                
-                console.log("You lose!");
+                displayResult.append(round("computer wins!"));
                computerScore = computerScore + 1;
             }
 }
